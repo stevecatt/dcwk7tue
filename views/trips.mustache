@@ -1,0 +1,40 @@
+<html>
+<body>
+
+<h1>Vacations</h1>
+
+<form action="trips" method = "POST">
+<input type="text" name="destination" placeholder ="Destination">
+<input type="text" name="dateDepart" placeholder= "Departure date">
+<input type ="text" name="datReturn" placeholder= "Return Date">
+<input type ="text" name="imageUrl" placeholder= "Image">
+<button type="submit" >Save Trip</button>
+
+</form>
+
+<form action="delete" method = "POST">
+<input type="text" name="dest" placeholder ="Destination">
+<button type="submit" >Delete Trip</button>
+</form>
+
+<ul>
+{{#triplist}}
+<h3>{{destination}}</h3>
+<span>{{dateDepart}}</span>
+<span>{{datReturn}}</span>
+<img src={{imageUrl}}>
+
+
+{{/triplist}}
+
+
+</ul>
+
+
+
+</form>
+
+</body>
+
+
+</html>
